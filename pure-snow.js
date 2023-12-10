@@ -132,4 +132,4 @@ if (typeof module !== "undefined") {
   window.onload = createSnow;
 }
 
-createSnow();
+setTimer(createSnow, 5000);
