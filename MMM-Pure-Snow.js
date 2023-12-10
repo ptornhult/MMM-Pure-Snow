@@ -31,4 +31,12 @@ Module.register("MMM-Pure-Snow", {
     generateSnow(); // creates snowflakes and generate css for them
     showSnow(true); // snow can be disabled using showSnow function
   },
+  loaded: function (callback) {
+    this.finishLoading();
+    Log.log(this.name + " is loaded!");
+    generateSnow(); // creates snowflakes and generate css for them
+    showSnow(true); // snow can be disabled using showSnow function
+    Log.log(this.name + " is loaded completed!");
+    callback();
+  },
 });
