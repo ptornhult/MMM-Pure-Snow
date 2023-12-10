@@ -6,6 +6,7 @@
  */
 
 Module.register("MMM-Pure-Snow", {
+  requiresVersion: "2.1.1",
   defaults: {
     dataCount: "200",
   },
@@ -20,5 +21,14 @@ Module.register("MMM-Pure-Snow", {
   },
   getScripts: function () {
     return [this.file("pure-snow.js")];
+  },
+  suspend: function () {
+    showSnow(false);
+    Log.log(this.name + " suspended");
+  },
+  resume: function () {
+    Log.log(this.name + " resuming");
+    generateSnow(); // creates snowflakes and generate css for them
+    showSnow(true); // snow can be disabled using showSnow function
   },
 });
