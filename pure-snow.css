@@ -1,5 +1,5 @@
 body {
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #10161e 0%, #000000 100%);
     overflow-x: hidden;
     min-height: 100vh;
     /* If you want to change the site height you can remove overflow-y */

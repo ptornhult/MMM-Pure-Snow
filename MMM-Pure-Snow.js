@@ -8,7 +8,7 @@
 Module.register("MMM-Pure-Snow", {
   requiresVersion: "2.1.1",
   defaults: {
-    dataCount: "200",
+    dataCount: "100",
   },
   getDom: function () {
     var wrapper = document.createElement("div");

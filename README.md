@@ -31,9 +31,9 @@ modules: [
   {
     module: "MMM-Pure-Snow",
     position: "fullscreen_below",
-	  config: [
-		  dataCount: "200"
-	  ]
+    config: {
+      dataCount: "100",
+    },
   },
 ];
 ```

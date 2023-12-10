@@ -124,10 +124,12 @@ window.addEventListener("resize", createSnow);
 
 // export createSnow function if using node or CommonJS environment
 if (typeof module !== "undefined") {
+  console.log("MMM-Pure-Snow", "module");
   module.exports = {
     createSnow,
     showSnow,
   };
 } else {
+  console.log("MMM-Pure-Snow", "onload");
   window.onload = createSnow;
 }
