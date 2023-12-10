@@ -131,6 +131,5 @@ if (typeof module !== "undefined") {
 } else {
   window.onload = createSnow;
 }
-setTimeout(function () {
-  createSnow();
-}, 10000);
+
+createSnow();
