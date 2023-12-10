@@ -121,13 +121,9 @@ Module.register("MMM-Pure-Snow", {
 
     window.addEventListener("resize", createSnow);
 
-    function createSnowDelayed() {
-      setTimer(function () {
-        createSnow();
-      }, 10000);
-    }
-
-    window.onload = createSnowDelayed;
+    setTimeout(function () {
+      createSnow();
+    }, 5000);
 
     return wrapper;
   },
