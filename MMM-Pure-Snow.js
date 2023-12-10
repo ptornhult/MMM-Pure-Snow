@@ -113,11 +113,21 @@ Module.register("MMM-Pure-Snow", {
       addCSS(rule);
     }
 
-    setTimer(function () {
+    function createSnow() {
       setHeightVariables();
       generateSnowCSS(snowflakesCount);
       generateSnow(snowflakesCount);
-    }, 10000);
+    }
+
+    window.addEventListener("resize", createSnow);
+
+    function createSnowDelayed() {
+      setTimer(function () {
+        createSnow();
+      }, 10000);
+    }
+
+    window.onload = createSnowDelayed;
 
     return wrapper;
   },
