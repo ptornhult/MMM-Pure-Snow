@@ -4,7 +4,7 @@ Inspired by [hyperstown's pure-snow.js](https://github.com/hyperstown/pure-snow.
 
 **Screenshot**
 
-![](.github/example-water.png)
+![](.github/snow.png)
 
 ## Installation
 
