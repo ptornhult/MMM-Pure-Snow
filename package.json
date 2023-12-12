@@ -1,0 +1,24 @@
+{
+  "name": "mmm-pure-snow",
+  "version": "1.0.0",
+  "description": "A module for MagicMirror² to display snow in background.",
+  "repository": "github:ptornhult/MMM-Pure-Snow",
+  "keywords": [
+    "magicmirror",
+    "magicmirror2",
+    "background",
+    "snow"
+  ],
+  "author": {
+    "name": "ptornhult",
+    "url": "https://github.com/ptornhult/"
+  },
+  "contributors": [
+    "https://github.com/ptornhult/MMM-Pure-Snow/graphs/contributors"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ptornhult/MMM-Pure-Snow/issues"
+  },
+  "homepage": "https://github.com/ptornhult/MMM-Pure-Snow#readme"
+}
