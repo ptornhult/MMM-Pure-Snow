@@ -2,22 +2,22 @@
 
 Inspired by [hyperstown's pure-snow.js](https://github.com/hyperstown/pure-snow.js/blob/master/pure-snow.js) I created a wrapper plugin to improve your winter experience!
 
-**Screenshot**
+## Screenshot
 
-![](.github/snow.png)
+![screenshot](.github/snow.png)
 
 ## Installation
 
-In your terminal, go to your MagicMirror's Module folder:
+In your terminal, go to your MagicMirror's module folder:
 
-```
+```bash
 cd ~/MagicMirror/modules
 ```
 
 Clone this repository:
 
-```
-git clone https://github.com/ptornhult/MMM-Pure-Snow.git
+```bash
+git clone https://github.com/ptornhult/MMM-Pure-Snow
 ```
 
 Configure the module in your `config.js` file.

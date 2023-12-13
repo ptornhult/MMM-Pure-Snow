@@ -1,13 +1,13 @@
 body {
-    background: radial-gradient(ellipse at bottom, #10161e 0%, #000000 100%);
+  background: radial-gradient(ellipse at bottom, #10161e 0%, #000 100%);
 }
 
 .snowflake {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: linear-gradient(white, white);
-    /* Workaround for Chromium's selective color inversion */
-    border-radius: 50%;
-    filter: drop-shadow(0 0 10px white);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(white, white);
+  /* Workaround for Chromium's selective color inversion */
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
 }

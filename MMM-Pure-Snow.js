@@ -1,4 +1,4 @@
-/* Magic Mirror
+/* MagicMirror²
  * Module: MMM-Pure-Snow
  *
  * By Peter Törnhult https://tornhult.se
@@ -10,20 +10,11 @@ Module.register("MMM-Pure-Snow", {
   defaults: {
     dataCount: "100",
   },
-  getDom: function () {
-    var wrapper = document.createElement("div");
+  getDom() {
+    const wrapper = document.createElement("div");
     wrapper.setAttribute("id", "snow");
 
-    let snowflakesCount = this.config.dataCount; // Snowflake count, can be overwritten by attrs
-    let baseCSS = ``;
-
-    // set global attributes
-    if (typeof SNOWFLAKES_COUNT !== "undefined") {
-      snowflakesCount = SNOWFLAKES_COUNT;
-    }
-    if (typeof BASE_CSS !== "undefined") {
-      baseCSS = BASE_CSS;
-    }
+    const snowflakesCount = this.config.dataCount; // Snowflake count, can be overwritten by attrs
 
     let bodyHeightPx = null;
     let pageHeightVh = null;
@@ -39,7 +30,7 @@ Module.register("MMM-Pure-Snow", {
       const snowWrapper = document.getElementById("snow");
       snowWrapper.innerHTML = "";
       for (let i = 0; i < snowDensity; i++) {
-        let board = document.createElement("div");
+        const board = document.createElement("div");
         board.className = "snowflake";
         snowWrapper.appendChild(board);
       }
@@ -79,20 +70,20 @@ Module.register("MMM-Pure-Snow", {
 
     // Create style for snowflake
     function generateSnowCSS(snowDensity = 200) {
-      let snowflakeName = "snowflake";
-      let rule = baseCSS;
+      const snowflakeName = "snowflake";
+      let rule = ``;
 
       for (let i = 1; i < snowDensity; i++) {
-        let randomX = Math.random() * 100; // vw
-        let randomOffset = Math.random() * 10; // vw;
-        let randomXEnd = randomX + randomOffset;
-        let randomXEndYoyo = randomX + randomOffset / 2;
-        let randomYoyoTime = getRandomArbitrary(0.3, 0.8);
-        let randomYoyoY = randomYoyoTime * pageHeightVh; // vh
-        let randomScale = Math.random();
-        let fallDuration = randomIntRange(10, (pageHeightVh / 10) * 3); // s
-        let fallDelay = randomInt((pageHeightVh / 10) * 3) * -1; // s
-        let opacity = Math.random();
+        const randomX = Math.random() * 100; // vw
+        const randomOffset = Math.random() * 10; // vw;
+        const randomXEnd = randomX + randomOffset;
+        const randomXEndYoyo = randomX + randomOffset / 2;
+        const randomYoyoTime = getRandomArbitrary(0.3, 0.8);
+        const randomYoyoY = randomYoyoTime * pageHeightVh; // vh
+        const randomScale = Math.random();
+        const fallDuration = randomIntRange(10, (pageHeightVh / 10) * 3); // s
+        const fallDelay = randomInt((pageHeightVh / 10) * 3) * -1; // s
+        const opacity = Math.random();
 
         rule += `
       .${snowflakeName}:nth-child(${i}) {
@@ -127,13 +118,13 @@ Module.register("MMM-Pure-Snow", {
 
     return wrapper;
   },
-  getStyles: function () {
+  getStyles() {
     return [this.file("pure-snow.css")];
   },
-  suspend: function () {
+  suspend() {
     document.getElementById("snow").style.display = "none";
   },
-  resume: function () {
+  resume() {
     document.getElementById("snow").style.display = "block";
   },
 });
